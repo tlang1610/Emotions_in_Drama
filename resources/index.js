@@ -30,7 +30,7 @@ function initializeDropdown(all_plays){
             var node = document.createElement("a");
             node.innerHTML = drop_entry;
             node.addEventListener("click",function(){
-                drawChart("data/"+play.json,'myPieChart1')})
+                drawChart("data/"+play.json,'myPieChart')})
             document.getElementById(current_author + "_dropdown").appendChild(node);
         }
     }
