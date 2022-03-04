@@ -1,0 +1,113 @@
+html{
+    height: 100%;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+title{
+    
+    font-family: var(--font-default);
+}
+
+.header{
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    width: 400px;
+    margin: auto;
+}
+
+.item{
+    width: 700px; 
+    height: 500px;
+}
+
+ /* Dropdown Button */
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    width:160px;
+}
+  
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+.dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+  
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;} 
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+
+
+
+
+
+
+.dropbtn_play {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    width:160px;
+}
+
+.dropdown_play {
+    position: relative;
+    display: inline-block;
+  }
+
+.dropdown-content_play {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width: 100%;
+    left: 100%;
+    z-index: 1;
+    top: 0px;
+ }
+
+ .dropdown-content_play a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}  
+
+/* Change color of dropdown links on hover */
+.dropdown-content_play a:hover {background-color: #ddd;}
+
+ /* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown_play:hover .dropbtn_play {background-color: #3e8e41;} 
+
+/* Show the dropdown menu on hover */
+.dropdown_play:hover .dropdown-content_play {display: block;}
