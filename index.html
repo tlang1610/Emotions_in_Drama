@@ -20,9 +20,15 @@
             <div id="author_dropdown" class="dropdown-content"></div>
         </div> 
         <!-- Identify where the chart should be drawn. -->
-        <div class="container" style="display:flex;flex-direction: row;">
-            <div class="item" style="order:1" id="myPieChart"></div>
-            <div class="item" style="order:2" id="playInformation"></div>
+        <div class="container" style="display:flex;flex-direction: column;">
+            <div style="order:0" id="playInformation"></div>
+            <div class="piechart" style="order:1" id="PieChart"></div>
+            <div  style="order:2">
+                <div id="column_buttons" class="container" style="order:1;display:flex;flex-direction: row;">
+                    
+                </div>
+                <div class="columnchart" style="order:1" id="ColumnChart"></div>
+            </div>
             </div>
         
     </body>

@@ -18,8 +18,12 @@ title{
     margin: auto;
 }
 
-.item{
+.piechart{
     width: 700px; 
+    height: 500px;
+}
+.columnchart{
+    width: 1100px; 
     height: 500px;
 }
 
@@ -111,3 +115,12 @@ title{
 
 /* Show the dropdown menu on hover */
 .dropdown_play:hover .dropdown-content_play {display: block;}
+
+.graph_button {
+    background-color: #c9c9c9;
+    color: white;
+    padding: 16px;
+}
+.graph_button:hover {
+    background-color: #e6e6e6;
+} 
