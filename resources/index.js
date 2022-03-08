@@ -22,6 +22,22 @@ var emotion_colors = {
     "suffering": "#000fc5"
 }
 var emotion_dict = {};
+var current_mode = "absolute";
+var characters = [];
+
+function myFunction() {
+    // Get the checkbox
+    var checkBox = document.getElementById("myCheck");
+    // Get the output text
+    var text = document.getElementById("text");
+  
+    // If the checkbox is checked, display the output text
+    if (checkBox.checked == true){
+      text.style.display = "block";
+    } else {
+      text.style.display = "none";
+    }
+  } 
 
 function getAllPlays(){
     fetch("data/all_plays.json")
@@ -117,10 +133,12 @@ function visualize(data){
     element.addEventListener("click",function(){
         updateChart(data, "absolute",10)});
 
+
     var i = 0;
     var k = 0;
     var data_array = [['Monologues','Percentage',{ role: 'style' },{ role: 'tooltip' }]];
     for (let line of data.lines){
+        if(line.)
         emotion_dict[line.pre1_tag_type] += 1;
         i+=1;
         if(i == 10){
@@ -167,12 +185,17 @@ function visualize(data){
                
 }
 function updateChart(data,mode,seg) {
+    var use_mode = mode;
+    if (mode == ""){
+        use_mode = current_mode;
+    }
+    current_mode = use_mode;
 
     for (let button of document.getElementsByClassName("graph_button")) {
         button.setAttribute("style", "background-color: #c9c9c9;");
     }
 
-    var element =document.getElementById(mode+"_button");
+    var element =document.getElementById(use_mode+"_button");
     element.setAttribute("style", "background-color: #7e7e7e;");
     
     var i = 0;
@@ -181,7 +204,7 @@ function updateChart(data,mode,seg) {
     var data_array = [['Monologues','Percentage',{ role: 'style' },{ role: 'tooltip' }]];
     for (let line of data.lines){
         var factor = 1;
-        if (mode == "weighted") {
+        if (use_mode == "weighted") {
             factor = line.end - line.start;
         }
         segment_length += factor;
