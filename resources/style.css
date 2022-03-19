@@ -1,11 +1,12 @@
 html{
     box-sizing: border-box;
     overflow-x: hidden;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
 }
 
 
-title{
+h1{
+    margin: 10px;
     font-family: var(--font-default);
 }
 
@@ -21,45 +22,134 @@ body{
     margin:0 auto;
     position: relative;
 }
+#playInformation{
+    width: 80%;
+    margin: auto;
+}
+.play_info{
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.info_field{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    margin-top: 7px;
+}
 
 .header{
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 300;
     text-align: center;
     width: 400px;
     margin: auto;
+    padding: 10px;
 }
 
-.piechart{
-    width: 700px; 
+#PieChart1_container{
+    position:relative;
+    width: 483px; 
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    height: 330px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#PieChart1{
+    width: 483px; 
+    height: 328px;
+}
+
+#PieChart2_container{
+    position:relative;
+    width: 483px; 
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    height: 330px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#PieChart2{
+    width: 483px; 
+    height: 328px;
+}
+
+#columnchart_container1{
+    position: relative;
+    width: 978px; 
+    height: 500px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+#columnchart_container2{
+    position: relative;
+    width: 978px; 
+    height: 500px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+
+#ColumnChart1{
+    width: 978px; 
     height: 500px;
 }
-.columnchart{
-    width: 1100px; 
+#ColumnChart2{
+    width: 978px; 
     height: 500px;
 }
+
+#linechart_container{
+    position: relative;
+    width: 978px; 
+    height: 540px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+#LineChart1{
+    width:938px;
+    height:500px;
+    margin:20px;
+}
+
+/* Dropdown Menus ------------------------------------------------------------------------------ */
 
  /* Dropdown Button */
 .dropbtn {
-    background-color: #04AA6D;
+    cursor: pointer;
+    background-color: #1d9068;
     color: white;
-    padding: 16px;
+    padding: 10px;
     font-size: 16px;
     border: none;
-    width:160px;
+    width:150px;
+    border-radius: 6px;
 }
   
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
+    cursor: pointer;
     position: relative;
     display: inline-block;
+    margin-left: 10px;
   }
   
 .dropdown-content {
         display: none;
         position: absolute;
         background-color: #f1f1f1;
-        min-width: 160px;
+        min-width: 150px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
     }
@@ -80,22 +170,18 @@ body{
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
-
-
-
-
-
-
 .dropbtn_play {
-    background-color: #04AA6D;
+    cursor: pointer;
+    background-color: #26b986;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
-    width:160px;
+    width:150px;
 }
 
 .dropdown_play {
+    cursor: pointer;
     position: relative;
     display: inline-block;
   }
@@ -104,7 +190,7 @@ body{
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 160px;
+    min-width: 300px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     width: 100%;
     left: 100%;
@@ -128,16 +214,75 @@ body{
 /* Show the dropdown menu on hover */
 .dropdown_play:hover .dropdown-content_play {display: block;}
 
-.graph_button {
+/* set different positions for different dropdowns */
+#dropdown_pie2 {
+    margin-left: 5px;
+}
+#dropdown_col1 {
+    margin-left: 0px;
+}
+#dropdown_col2 {
+    margin-left: 0px;
+}
+#dropdown_line1 {
+    margin-left: 0px;
+}
+#dropdown_mode_pie1 {
+    margin-left: 1px;
+}
+#dropdown_style_pie1 {
+    margin-left: 1px;
+}
+
+/* Chart Control Buttons ------------------------------------------------------------------------------ */
+
+.button_container{
+    order:1;display:flex;flex-direction: row;
+    margin-left: 10px;
+}
+
+.graph1_button {
     background-color: #c9c9c9;
     color: white;
-    padding: 16px;
+    padding: 10px;
 }
-.graph_button:hover {
-    background-color: #e6e6e6;
+.graph1_button:hover {
+    background-color: #7e7e7e;
 } 
-
+.graph2_button {
+    background-color: #c9c9c9;
+    color: white;
+    padding: 10px;
+}
+.graph2_button:hover {
+    background-color: #7e7e7e;
+} 
+.graph3_button {
+    background-color: #c9c9c9;
+    color: white;
+    padding: 10px;
+}
+.graph3_button:hover {
+    background-color: #7e7e7e;
+} 
 .char_checkbox{
     padding-left: 15px;
     padding-right: 15px;
+}
+
+/*Download Buttons--------------------------------------------------------------------------------------*/
+.download_btn {
+    cursor: pointer;
+    border: 1px solid rgb(85, 85, 85);
+    position:absolute;
+    border-radius: 5px;
+    background:#c9c9c9;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+    text-align: center;
+    right:1px;
+    bottom:1px;
 }

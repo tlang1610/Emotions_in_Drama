@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
     <head>
+        <title>Emotions in Drama</title>
         <meta charset="utf-8"/>
         <meta name="author" content="Theresa Lang" />
         <meta name="language" content="DE" />
@@ -13,28 +14,142 @@
 
     <body id="my_body">
         <div id="page_wrap">
-            <title>Emotions in Drama</title>
-        <h1>Emotions in Drama</h1>
+        <h1 class="header">Emotions in Drama</h1>
         <!-- Dropdown. -->
         <div class="dropdown">
-            <button class="dropbtn">Dropdown Author</button>
+            <button class="dropbtn">Select Author</button>
             <div id="author_dropdown" class="dropdown-content"></div>
         </div> 
         <!-- Identify where the chart should be drawn. -->
         <div class="container" style="display:flex;flex-direction: column;">
             <div style="order:0" id="playInformation"></div>
-            <div class="piechart" style="order:1" id="PieChart"></div>
-            <div  style="order:2">
-                <div id="column_buttons" class="container" style="order:1;display:flex;flex-direction: row;"></div>
-                <div id="column_checkboxes" class="container" style="order:1;display:flex;flex-direction: row;">
+            <div  id="piecharts" style="order:1;display:flex;flex-direction: row;">
+                <div style="order:0" >
+                    <div id="pie1_buttons" style="display:flex;flex-direction: row;">
+                        <div id="dropdown_pie1" class="dropdown">
+                            <button class="dropbtn">Quintile Selection</button>
+                            <div class="dropdown-content">
+                                <a id="drop_pie1_full">Full Play</a>
+                                <a id="drop_pie1_1">Quintile 1</a>
+                                <a id="drop_pie1_2">Quintile 2</a>
+                                <a id="drop_pie1_3">Quintile 3</a>
+                                <a id="drop_pie1_4">Quintile 4</a>
+                                <a id="drop_pie1_5">Quintile 5</a>
+                            </div>
+                        </div> 
+                        <div id="dropdown_mode_pie1" class="dropdown">
+                            <button class="dropbtn">Weight Selection</button>
+                            <div class="dropdown-content">
+                                <a id="drop_pie1_absolute">Absolute</a>
+                                <a id="drop_pie1_weighted">Weighted</a>
+                            </div>
+                        </div> 
+                        <div id="dropdown_style_pie1" class="dropdown">
+                            <button class="dropbtn">Emotion Classes</button>
+                            <div class="dropdown-content">
+                                <a id="drop_pie1_sub">Sub Classes</a>
+                                <a id="drop_pie1_main">Main Classes</a>
+                            </div>
+                        </div> 
+                    </div>
+                    <div id="PieChart1_container">
+                        <div id="PieChart1"></div>
+                        <div class="download_btn" id="DownloadPie1">Open as Image</div>
+                    </div>
+                </div>
+                <div  style="order:1">
+                    <div id="dropdown_pie2" class="dropdown">
+                        <button class="dropbtn">Quintile Selection</button>
+                        <div class="dropdown-content">
+                            <a id="drop_pie2_full">Full Play</a>
+                            <a id="drop_pie2_1">Quintile 1</a>
+                            <a id="drop_pie2_2">Quintile 2</a>
+                            <a id="drop_pie2_3">Quintile 3</a>
+                            <a id="drop_pie2_4">Quintile 4</a>
+                            <a id="drop_pie2_5">Quintile 5</a>
+                        </div>
+                    </div> 
+                    <div id="PieChart2_container">
+                        <div id="PieChart2"></div>
+                        <div class="download_btn" id="DownloadPie2">Open as Image</div>
+                    </div>
+                </div>
+            </div>
+            <div  style="order:1">
+                <div id="column1_buttons" class="button_container" >
+                    <div id="absolute1_button" class="graph1_button" style="background:#7e7e7e">Absolute</div>
+                    <div id="weighted1_button" class="graph1_button">Weighted</div>
+                    <div  id="dropdown_col1" class="dropdown">
+                        <button class="dropbtn">Quintile Selection</button>
+                        <div class="dropdown-content">
+                            <a id="drop_col1_full">Full Play</a>
+                            <a id="drop_col1_1">Quintile 1</a>
+                            <a id="drop_col1_2">Quintile 2</a>
+                            <a id="drop_col1_3">Quintile 3</a>
+                            <a id="drop_col1_4">Quintile 4</a>
+                            <a id="drop_col1_5">Quintile 5</a>
+                        </div>
+                    </div> 
+                    
+                
+                </div>
+                <!--
+                    <div id="column1_checkboxes" class="container" style="order:1;display:flex;flex-direction: row;">
                     <div class="char_checkbox" style="order:1;display:flex;flex-direction: row">
                         <div>charakter</div><input type="checkbox" id="charakter_check">
                     </div>
                     <div class="char_checkbox" style="order:1;display:flex;flex-direction: row">
-                        <div>charakter</div><input type="checkbox" id="myCheck" onclick="myFunction()">
+                        <div>charakter</div><input type="checkbox" id="myCheck" onclick="">
                     </div>
                 </div>
-                <div class="columnchart" style="order:1" id="ColumnChart"></div>
+                -->
+                <div id="columnchart_container1">
+                    <div style="order:1" id="ColumnChart1"></div>
+                    <div class="download_btn" id="DownloadColumn1">Open as Image</div>
+                </div>
+            </div>
+            <div  style="order:2">
+                <div id="column2_buttons" class="button_container">
+                    <div id="absolute2_button" class="graph2_button" style="background:#7e7e7e">Absolute</div>
+                    <div id="weighted2_button" class="graph2_button">Weighted</div>
+                        <div id="dropdown_col2"  class="dropdown">
+                            <button class="dropbtn">Quintile Selection</button>
+                            <div class="dropdown-content">
+                                <a id="drop_col2_full">Full Play</a>
+                                <a id="drop_col2_1">Quintile 1</a>
+                                <a id="drop_col2_2">Quintile 2</a>
+                                <a id="drop_col2_3">Quintile 3</a>
+                                <a id="drop_col2_4">Quintile 4</a>
+                                <a id="drop_col2_5">Quintile 5</a>
+                            </div>
+                        </div> 
+                    </div>
+                <div id="columnchart_container2">
+                    <div style="order:1" id="ColumnChart2"></div>
+                    <div class="download_btn" id="DownloadColumn2">Open as Image</div>
+                </div>
+            </div>
+            <div  style="order:3">
+                <div id="line1_buttons" class="button_container">
+                    <div id="absolute3_button" class="graph3_button" style="background:#7e7e7e">Absolute</div>
+                    <div id="weighted3_button" class="graph3_button">Weighted</div>
+                        <div id="dropdown_line1"  class="dropdown">
+                            <button class="dropbtn">Quintile Selection</button>
+                            <div class="dropdown-content">
+                                <a id="drop_lin1_full">Full Play</a>
+                                <a id="drop_lin1_1">Quintile 1</a>
+                                <a id="drop_lin1_2">Quintile 2</a>
+                                <a id="drop_lin1_3">Quintile 3</a>
+                                <a id="drop_lin1_4">Quintile 4</a>
+                                <a id="drop_lin1_5">Quintile 5</a>
+                            </div>
+                        </div> 
+                    </div>
+                <div id="linechart_container">
+                    <div style="order:2"><div id="LineChart1"></div>
+                    <div class="download_btn" id="DownloadLine">Open as Image</div>
+                </div>
+            </div>
             </div>
         </div>
     </body>
